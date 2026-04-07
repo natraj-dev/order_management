@@ -17,47 +17,47 @@
 order_management/
 │
 ├── app/
-│   ├── main.py                  
+│   ├── main.py
 │
-│   ├── core/                   
-│   │   ├── config.py           
-│   │   ├── security.py         
+│   ├── core/
+│   │   ├── config.py
+│   │   ├── security.py
 │
-│   ├── db/                     
-│   │   ├── session.py          
-│   │   ├── base.py             
+│   ├── db/
+│   │   ├── session.py
+│   │   ├── base.py
 │
-│   ├── models/                 
-│   │   ├── user.py             
-│   │   ├── product.py          
-│   │   ├── order.py            
-│   │   ├── payment.py          
+│   ├── models/
+│   │   ├── user.py
+│   │   ├── product.py
+│   │   ├── order.py
+│   │   ├── payment.py
 │
-│   ├── schemas/                
-│   │   ├── user.py             
-│   │   ├── product.py          
-│   │   ├── order.py            
-│   │   ├── payment.py          
+│   ├── schemas/
+│   │   ├── user.py
+│   │   ├── product.py
+│   │   ├── order.py
+│   │   ├── payment.py
 │
-│   ├── services/               
-│   │   ├── auth_service.py     
-│   │   ├── product_service.py  
-│   │   ├── order_service.py    
-│   │   ├── payment_service.py  
-│   │   ├── email_service.py    
-│   │   ├── email_templates.py  
+│   ├── services/
+│   │   ├── auth_service.py
+│   │   ├── product_service.py
+│   │   ├── order_service.py
+│   │   ├── payment_service.py
+│   │   ├── email_service.py
+│   │   ├── email_templates.py
 │
-│   ├── routers/                
-│   │   ├── auth.py             
-│   │   ├── product.py          
-│   │   ├── order.py            
-│   │   ├── payment.py           
+│   ├── routers/
+│   │   ├── auth.py
+│   │   ├── product.py
+│   │   ├── order.py
+│   │   ├── payment.py
 │
-│
-├── .env                        
-├── .gitignore                  
+├── .env
+├── .gitignore
 ├── requirements.txt
-├── README.md                   
+├── README.md
+├── order_management.postman_collection.json              
 
 
 ---
