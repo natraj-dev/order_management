@@ -57,7 +57,6 @@ order_management/
 ├── .gitignore
 ├── requirements.txt
 ├── README.md
-├── order_management.postman_collection.json              
 
 
 ---
