@@ -16,7 +16,6 @@ class OrderResponse(BaseModel):
     user_id: int
     total_amount: float
     status: str
-    payment_status: str | None
 
     class Config:
         from_attributes = True

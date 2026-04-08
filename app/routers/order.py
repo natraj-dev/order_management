@@ -17,10 +17,18 @@ from app.services.email_templates import order_confirmation_template
 from app.models.user import User
 from app.models.payment import Payment
 
+from fastapi import APIRouter, Depends, BackgroundTasks, HTTPException
+from sqlalchemy.orm import Session
+
+from app.db.session import get_db
+from app.schemas.order import OrderCreate, OrderResponse
+from app.core.security import get_current_user
+from app.models.user import User
+
+from app.services.order_service import create_order
+
 router = APIRouter(prefix="/orders", tags=["Orders"])
 
-
-#  Create Order
 
 @router.post("/", response_model=OrderResponse)
 def create_new_order(
@@ -32,24 +40,24 @@ def create_new_order(
     try:
         db_user = db.query(User).filter(User.email == user["sub"]).first()
 
-        order = create_order(db, db_user.id, data.items)
+        if not db_user:
+            raise HTTPException(status_code=404, detail="User not found")
 
-        background_tasks.add_task(
-            send_email,
-            to=db_user.email,
-            subject="Order Confirmation",
-            body=order_confirmation_template(order.id)
+        # ✅ ONLY ONE CALL
+        order = create_order(
+            db,
+            db_user.id,
+            data.items,
+            background_tasks
         )
-
-        send_order_email(background_tasks, db_user.email)
 
         return order
 
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
 
-
 # get order by id
+
 
 @router.put("/{order_id}/status")
 def update_order_status(
