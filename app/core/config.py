@@ -1,14 +1,18 @@
-from pydantic_settings import BaseSettings
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
-class Settings(BaseSettings):
-    DATABASE_URL: str
+class Settings:
+    DATABASE_URL = os.getenv("DATABASE_URL")
 
-    EMAIL: str
-    PASSWORD: str
+    EMAIL = os.getenv("EMAIL")
+    PASSWORD = os.getenv("PASSWORD")
 
-    class Config:
-        env_file = ".env"
+    # STRIPE KEYS (IMPORTANT)
+    STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY")
+    STRIPE_PUBLISHABLE_KEY = os.getenv("STRIPE_PUBLISHABLE_KEY")
 
 
 settings = Settings()

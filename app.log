@@ -126,3 +126,130 @@
 {"time": "2026-04-10T02:49:35.801466", "level": "INFO", "message": "RESPONSE | status=200 time=1.71ms path=/docs"}
 {"time": "2026-04-10T02:49:36.082656", "level": "INFO", "message": "REQUEST | method=GET path=/openapi.json"}
 {"time": "2026-04-10T02:49:36.250608", "level": "INFO", "message": "RESPONSE | status=200 time=168.01ms path=/openapi.json"}
+{"time": "2026-04-10T02:52:12.312350", "level": "INFO", "message": "REQUEST | method=GET path=/docs"}
+{"time": "2026-04-10T02:52:12.316596", "level": "INFO", "message": "RESPONSE | status=200 time=4.25ms path=/docs"}
+{"time": "2026-04-10T02:52:12.476543", "level": "INFO", "message": "REQUEST | method=GET path=/openapi.json"}
+{"time": "2026-04-10T02:52:12.634492", "level": "INFO", "message": "RESPONSE | status=200 time=157.8ms path=/openapi.json"}
+{"time": "2026-04-10T02:52:36.130981", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T02:52:36.744283", "level": "INFO", "message": "RESPONSE | status=200 time=613.39ms path=/auth/login"}
+{"time": "2026-04-10T02:52:59.614846", "level": "INFO", "message": "REQUEST | method=GET path=/auth/test-auth"}
+{"time": "2026-04-10T02:52:59.620825", "level": "INFO", "message": "RESPONSE | status=200 time=5.99ms path=/auth/test-auth"}
+{"time": "2026-04-10T02:53:11.057852", "level": "INFO", "message": "REQUEST | method=POST path=/auth/logout"}
+{"time": "2026-04-10T02:53:11.064224", "level": "INFO", "message": "RESPONSE | status=200 time=6.38ms path=/auth/logout"}
+{"time": "2026-04-10T02:53:18.104915", "level": "INFO", "message": "REQUEST | method=GET path=/auth/test-auth"}
+{"time": "2026-04-10T02:53:18.108006", "level": "INFO", "message": "RESPONSE | status=401 time=3.09ms path=/auth/test-auth"}
+{"time": "2026-04-10T05:17:25.915082", "level": "INFO", "message": "REQUEST | method=GET path=/docs"}
+{"time": "2026-04-10T05:17:25.917207", "level": "INFO", "message": "RESPONSE | status=200 time=2.13ms path=/docs"}
+{"time": "2026-04-10T05:17:26.192583", "level": "INFO", "message": "REQUEST | method=GET path=/openapi.json"}
+{"time": "2026-04-10T05:17:26.277167", "level": "INFO", "message": "RESPONSE | status=200 time=84.63ms path=/openapi.json"}
+{"time": "2026-04-10T05:18:47.116911", "level": "INFO", "message": "REQUEST | method=GET path=/payment/create-intent"}
+{"time": "2026-04-10T05:18:47.122916", "level": "INFO", "message": "RESPONSE | status=404 time=6.05ms path=/payment/create-intent"}
+{"time": "2026-04-10T05:20:11.576556", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T05:20:12.293367", "level": "INFO", "message": "RESPONSE | status=200 time=716.83ms path=/auth/login"}
+{"time": "2026-04-10T05:21:05.694912", "level": "INFO", "message": "REQUEST | method=POST path=/payment-intent"}
+{"time": "2026-04-10T05:21:05.696105", "level": "INFO", "message": "RESPONSE | status=404 time=1.21ms path=/payment-intent"}
+{"time": "2026-04-10T05:32:34.928715", "level": "INFO", "message": "REQUEST | method=POST path=/payment-intent"}
+{"time": "2026-04-10T05:32:34.930654", "level": "INFO", "message": "RESPONSE | status=404 time=2.06ms path=/payment-intent"}
+{"time": "2026-04-10T05:33:41.606415", "level": "INFO", "message": "REQUEST | method=POST path=/payment-intent"}
+{"time": "2026-04-10T05:33:41.607914", "level": "INFO", "message": "RESPONSE | status=404 time=1.57ms path=/payment-intent"}
+{"time": "2026-04-10T05:34:07.895466", "level": "INFO", "message": "REQUEST | method=POST path=/payment/create-intent"}
+{"time": "2026-04-10T05:34:09.641121", "level": "INFO", "message": "RESPONSE | status=200 time=1745.67ms path=/payment/create-intent"}
+{"time": "2026-04-10T05:36:53.004499", "level": "INFO", "message": "REQUEST | method=POST path=/payment/create-intent"}
+{"time": "2026-04-10T05:36:54.089240", "level": "INFO", "message": "RESPONSE | status=200 time=1084.72ms path=/payment/create-intent"}
+{"time": "2026-04-10T05:37:07.499482", "level": "INFO", "message": "REQUEST | method=POST path=/payment/create-intent"}
+{"time": "2026-04-10T05:37:07.931469", "level": "INFO", "message": "RESPONSE | status=200 time=431.88ms path=/payment/create-intent"}
+{"time": "2026-04-10T05:40:23.041051", "level": "INFO", "message": "REQUEST | method=GET path=/"}
+{"time": "2026-04-10T05:40:23.046642", "level": "INFO", "message": "RESPONSE | status=200 time=5.66ms path=/"}
+{"time": "2026-04-10T05:40:23.313042", "level": "INFO", "message": "REQUEST | method=GET path=/favicon.ico"}
+{"time": "2026-04-10T05:40:23.315704", "level": "INFO", "message": "RESPONSE | status=404 time=2.69ms path=/favicon.ico"}
+{"time": "2026-04-10T05:40:41.210318", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T05:40:41.812123", "level": "INFO", "message": "RESPONSE | status=200 time=601.75ms path=/auth/login"}
+{"time": "2026-04-10T05:41:03.597843", "level": "INFO", "message": "REQUEST | method=POST path=/payment/create-intent"}
+{"time": "2026-04-10T05:41:05.313286", "level": "INFO", "message": "RESPONSE | status=200 time=1715.5ms path=/payment/create-intent"}
+{"time": "2026-04-10T05:49:08.059847", "level": "INFO", "message": "REQUEST | method=POST path=/payment/create-intent"}
+{"time": "2026-04-10T05:49:09.351970", "level": "INFO", "message": "RESPONSE | status=200 time=1292.36ms path=/payment/create-intent"}
+{"time": "2026-04-10T05:56:19.994683", "level": "INFO", "message": "REQUEST | method=POST path=/payment/create-intent"}
+{"time": "2026-04-10T05:56:21.432198", "level": "INFO", "message": "RESPONSE | status=200 time=1437.58ms path=/payment/create-intent"}
+{"time": "2026-04-10T05:56:52.788181", "level": "INFO", "message": "REQUEST | method=POST path=/payment/confirm"}
+{"time": "2026-04-10T05:56:52.795263", "level": "INFO", "message": "RESPONSE | status=422 time=7.15ms path=/payment/confirm"}
+{"time": "2026-04-10T05:57:20.047907", "level": "INFO", "message": "REQUEST | method=POST path=/payment/confirm"}
+{"time": "2026-04-10T05:57:21.334779", "level": "INFO", "message": "RESPONSE | status=200 time=1286.87ms path=/payment/confirm"}
+{"time": "2026-04-10T06:29:26.161245", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T06:29:26.771649", "level": "INFO", "message": "RESPONSE | status=200 time=610.2ms path=/auth/login"}
+{"time": "2026-04-10T06:30:14.226469", "level": "INFO", "message": "REQUEST | method=POST path=/payment/create-intent"}
+{"time": "2026-04-10T06:30:15.998445", "level": "INFO", "message": "RESPONSE | status=200 time=1772.07ms path=/payment/create-intent"}
+{"time": "2026-04-10T06:30:49.193293", "level": "INFO", "message": "REQUEST | method=POST path=/payment/confirm"}
+{"time": "2026-04-10T06:30:50.434614", "level": "INFO", "message": "RESPONSE | status=200 time=1241.35ms path=/payment/confirm"}
+{"time": "2026-04-10T06:36:11.588925", "level": "INFO", "message": "REQUEST | method=POST path=/payment/confirm"}
+{"time": "2026-04-10T06:36:14.029699", "level": "INFO", "message": "RESPONSE | status=200 time=2440.85ms path=/payment/confirm"}
+{"time": "2026-04-10T06:36:23.835781", "level": "INFO", "message": "REQUEST | method=POST path=/payment/create-intent"}
+{"time": "2026-04-10T06:36:24.375952", "level": "INFO", "message": "RESPONSE | status=200 time=540.25ms path=/payment/create-intent"}
+{"time": "2026-04-10T06:36:45.888745", "level": "INFO", "message": "REQUEST | method=POST path=/payment/confirm"}
+{"time": "2026-04-10T06:36:47.078837", "level": "INFO", "message": "RESPONSE | status=200 time=1190.06ms path=/payment/confirm"}
+{"time": "2026-04-10T06:54:22.978400", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T06:54:23.519053", "level": "INFO", "message": "RESPONSE | status=200 time=540.53ms path=/auth/login"}
+{"time": "2026-04-10T06:55:15.443706", "level": "INFO", "message": "REQUEST | method=POST path=/payment/create-intent"}
+{"time": "2026-04-10T06:55:17.425153", "level": "INFO", "message": "RESPONSE | status=200 time=1981.43ms path=/payment/create-intent"}
+{"time": "2026-04-10T06:55:49.145848", "level": "INFO", "message": "REQUEST | method=POST path=/payment/confirm"}
+{"time": "2026-04-10T06:55:49.151874", "level": "INFO", "message": "RESPONSE | status=422 time=6.02ms path=/payment/confirm"}
+{"time": "2026-04-10T06:56:28.435135", "level": "INFO", "message": "REQUEST | method=POST path=/payment/confirm"}
+{"time": "2026-04-10T06:56:29.625445", "level": "INFO", "message": "RESPONSE | status=200 time=1190.39ms path=/payment/confirm"}
+{"time": "2026-04-10T07:10:05.337298", "level": "INFO", "message": "REQUEST | method=POST path=/payment/confirm"}
+{"time": "2026-04-10T07:10:06.692871", "level": "INFO", "message": "RESPONSE | status=200 time=1355.53ms path=/payment/confirm"}
+{"time": "2026-04-10T07:10:17.725430", "level": "INFO", "message": "REQUEST | method=POST path=/payment/create-intent"}
+{"time": "2026-04-10T07:10:18.181863", "level": "INFO", "message": "RESPONSE | status=200 time=456.42ms path=/payment/create-intent"}
+{"time": "2026-04-10T07:10:44.517595", "level": "INFO", "message": "REQUEST | method=POST path=/payment/confirm"}
+{"time": "2026-04-10T07:10:45.810240", "level": "INFO", "message": "RESPONSE | status=200 time=1292.56ms path=/payment/confirm"}
+{"time": "2026-04-10T08:12:33.128986", "level": "INFO", "message": "REQUEST | method=POST path=/webhook/stripe"}
+{"time": "2026-04-10T08:12:33.131794", "level": "INFO", "message": "REQUEST | method=POST path=/webhook/stripe"}
+{"time": "2026-04-10T08:12:33.135193", "level": "INFO", "message": "REQUEST | method=POST path=/webhook/stripe"}
+{"time": "2026-04-10T08:12:33.137989", "level": "INFO", "message": "REQUEST | method=POST path=/webhook/stripe"}
+{"time": "2026-04-10T08:12:33.272219", "level": "INFO", "message": "RESPONSE | status=200 time=143.45ms path=/webhook/stripe"}
+{"time": "2026-04-10T08:12:33.294284", "level": "INFO", "message": "RESPONSE | status=200 time=162.51ms path=/webhook/stripe"}
+{"time": "2026-04-10T08:12:33.297593", "level": "INFO", "message": "RESPONSE | status=200 time=163.12ms path=/webhook/stripe"}
+{"time": "2026-04-10T08:12:33.306982", "level": "INFO", "message": "RESPONSE | status=200 time=169.0ms path=/webhook/stripe"}
+{"time": "2026-04-10T08:12:33.312169", "level": "INFO", "message": "REQUEST | method=POST path=/webhook/stripe"}
+{"time": "2026-04-10T08:12:33.320355", "level": "INFO", "message": "RESPONSE | status=200 time=8.18ms path=/webhook/stripe"}
+{"time": "2026-04-10T08:12:33.323259", "level": "INFO", "message": "REQUEST | method=POST path=/webhook/stripe"}
+{"time": "2026-04-10T08:12:33.333300", "level": "INFO", "message": "RESPONSE | status=200 time=10.05ms path=/webhook/stripe"}
+{"time": "2026-04-10T08:12:35.562031", "level": "INFO", "message": "REQUEST | method=POST path=/webhook/stripe"}
+{"time": "2026-04-10T08:12:35.567755", "level": "INFO", "message": "RESPONSE | status=200 time=5.7ms path=/webhook/stripe"}
+{"time": "2026-04-10T08:12:35.567829", "level": "INFO", "message": "RESPONSE | status=200 time=5.8ms path=/webhook/stripe"}
+{"time": "2026-04-10T08:24:40.942574", "level": "INFO", "message": "REQUEST | method=POST path=/webhook/stripe"}
+{"time": "2026-04-10T08:24:40.978710", "level": "INFO", "message": "REQUEST | method=POST path=/webhook/stripe"}
+{"time": "2026-04-10T08:24:41.056877", "level": "INFO", "message": "RESPONSE | status=200 time=114.42ms path=/webhook/stripe"}
+{"time": "2026-04-10T08:24:41.071126", "level": "INFO", "message": "REQUEST | method=POST path=/webhook/stripe"}
+{"time": "2026-04-10T08:24:41.073234", "level": "INFO", "message": "REQUEST | method=POST path=/webhook/stripe"}
+{"time": "2026-04-10T08:24:41.081752", "level": "INFO", "message": "RESPONSE | status=200 time=103.32ms path=/webhook/stripe"}
+{"time": "2026-04-10T08:24:41.094653", "level": "INFO", "message": "REQUEST | method=POST path=/webhook/stripe"}
+{"time": "2026-04-10T08:24:41.097734", "level": "INFO", "message": "REQUEST | method=POST path=/webhook/stripe"}
+{"time": "2026-04-10T08:24:41.203539", "level": "INFO", "message": "RESPONSE | status=200 time=132.39ms path=/webhook/stripe"}
+{"time": "2026-04-10T08:24:41.206389", "level": "INFO", "message": "RESPONSE | status=200 time=133.24ms path=/webhook/stripe"}
+{"time": "2026-04-10T08:24:41.209827", "level": "INFO", "message": "RESPONSE | status=200 time=115.9ms path=/webhook/stripe"}
+{"time": "2026-04-10T08:24:41.214405", "level": "INFO", "message": "RESPONSE | status=200 time=116.78ms path=/webhook/stripe"}
+{"time": "2026-04-10T08:24:43.519591", "level": "INFO", "message": "REQUEST | method=POST path=/webhook/stripe"}
+{"time": "2026-04-10T08:24:43.520049", "level": "INFO", "message": "REQUEST | method=POST path=/webhook/stripe"}
+{"time": "2026-04-10T08:24:43.526049", "level": "INFO", "message": "RESPONSE | status=200 time=6.67ms path=/webhook/stripe"}
+{"time": "2026-04-10T08:24:43.527676", "level": "INFO", "message": "RESPONSE | status=200 time=7.62ms path=/webhook/stripe"}
+{"time": "2026-04-10T08:42:33.982015", "level": "INFO", "message": "REQUEST | method=POST path=/webhook/stripe"}
+{"time": "2026-04-10T08:42:33.994124", "level": "INFO", "message": "REQUEST | method=POST path=/webhook/stripe"}
+{"time": "2026-04-10T08:42:34.055678", "level": "INFO", "message": "RESPONSE | status=200 time=73.77ms path=/webhook/stripe"}
+{"time": "2026-04-10T08:42:34.058124", "level": "INFO", "message": "RESPONSE | status=200 time=64.05ms path=/webhook/stripe"}
+{"time": "2026-04-10T08:42:34.067685", "level": "INFO", "message": "REQUEST | method=POST path=/webhook/stripe"}
+{"time": "2026-04-10T08:42:34.068579", "level": "INFO", "message": "REQUEST | method=POST path=/webhook/stripe"}
+{"time": "2026-04-10T08:42:34.072763", "level": "INFO", "message": "REQUEST | method=POST path=/webhook/stripe"}
+{"time": "2026-04-10T08:42:34.187973", "level": "INFO", "message": "RESPONSE | status=200 time=120.27ms path=/webhook/stripe"}
+{"time": "2026-04-10T08:42:34.191954", "level": "INFO", "message": "RESPONSE | status=200 time=123.41ms path=/webhook/stripe"}
+{"time": "2026-04-10T08:42:34.194110", "level": "INFO", "message": "RESPONSE | status=200 time=121.34ms path=/webhook/stripe"}
+{"time": "2026-04-10T08:42:34.214147", "level": "INFO", "message": "REQUEST | method=POST path=/webhook/stripe"}
+{"time": "2026-04-10T08:42:34.229933", "level": "INFO", "message": "RESPONSE | status=200 time=15.83ms path=/webhook/stripe"}
+{"time": "2026-04-10T08:42:36.549062", "level": "INFO", "message": "REQUEST | method=POST path=/webhook/stripe"}
+{"time": "2026-04-10T08:42:36.553682", "level": "INFO", "message": "REQUEST | method=POST path=/webhook/stripe"}
+{"time": "2026-04-10T08:42:36.556319", "level": "INFO", "message": "RESPONSE | status=200 time=7.23ms path=/webhook/stripe"}
+{"time": "2026-04-10T08:42:36.560535", "level": "INFO", "message": "RESPONSE | status=200 time=6.82ms path=/webhook/stripe"}
+{"time": "2026-04-10T09:06:48.133743", "level": "INFO", "message": "REQUEST | method=GET path=/"}
+{"time": "2026-04-10T09:06:48.175828", "level": "INFO", "message": "RESPONSE | status=200 time=47.41ms path=/"}
+{"time": "2026-04-10T09:06:53.285906", "level": "INFO", "message": "REQUEST | method=GET path=/docs"}
+{"time": "2026-04-10T09:06:53.289281", "level": "INFO", "message": "RESPONSE | status=200 time=3.36ms path=/docs"}
+{"time": "2026-04-10T09:06:53.767235", "level": "INFO", "message": "REQUEST | method=GET path=/openapi.json"}
+{"time": "2026-04-10T09:06:54.020861", "level": "INFO", "message": "RESPONSE | status=200 time=253.65ms path=/openapi.json"}

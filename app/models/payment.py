@@ -5,7 +5,7 @@ from datetime import datetime
 import enum
 
 
-# ✅ Better enum (clean & reusable)
+# ✅ Enum (clean)
 class PaymentStatus(str, enum.Enum):
     SUCCESS = "SUCCESS"
     FAILED = "FAILED"
@@ -17,19 +17,30 @@ class Payment(Base):
 
     id = Column(Integer, primary_key=True, index=True)
 
-    order_id = Column(Integer, ForeignKey("orders.id"))
+    # ✅ FK (allow NULL initially if not linked yet)
+    order_id = Column(Integer, ForeignKey("orders.id"), nullable=True)
 
+    # ✅ Amount
     amount = Column(Float, nullable=False)
 
-    status = Column(Enum(PaymentStatus), default=PaymentStatus.PENDING)
+    # ✅ Store as string internally (important fix)
+    status = Column(
+        Enum(PaymentStatus),
+        default=PaymentStatus.PENDING,
+        nullable=False
+    )
 
+    # ✅ Stripe uses "card"
     payment_method = Column(String(50), nullable=True)
 
-    transaction_id = Column(String(255), unique=True, nullable=True)
+    # ✅ Stripe PaymentIntent ID (pi_xxx)
+    transaction_id = Column(String(255), unique=True, nullable=False)
 
+    # ✅ Retry tracking
     retry_count = Column(Integer, default=0)
 
+    # ✅ Timestamp
     created_at = Column(DateTime, default=datetime.utcnow)
 
-    # ✅ Relationship
+    # ✅ Relationship (correct)
     order = relationship("Order", back_populates="payments")

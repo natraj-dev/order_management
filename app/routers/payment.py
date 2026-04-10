@@ -1,15 +1,40 @@
+from app.services.payment_service import confirm_payment
 from fastapi import APIRouter, Depends, BackgroundTasks, HTTPException
 from sqlalchemy.orm import Session
 
 from app.db.session import get_db
 from app.schemas.payment import PaymentCreate
-from app.services.payment_service import create_payment, process_payment
+from app.services.payment_service import create_payment, process_payment, create_payment_intent
 from app.core.security import get_current_user
+from app.db.session import get_db
+from pydantic import BaseModel
+
 
 router = APIRouter(prefix="/payment", tags=["Payments"])
 
 
+class PaymentRequest(BaseModel):
+    amount: int
+
+
+@router.post("/create-intent")
+def create_intent(data: PaymentRequest):
+    return create_payment_intent(data.amount)
+
+
+class ConfirmRequest(BaseModel):
+    payment_intent_id: str
+    order_id: int
+
+
+@router.post("/confirm")
+def confirm(data: ConfirmRequest, db: Session = Depends(get_db)):
+    return confirm_payment(data.payment_intent_id, data.order_id,
+                           db)
+
 # ✅ CREATE PAYMENT
+
+
 @router.post("/")
 def make_payment(
     data: PaymentCreate,

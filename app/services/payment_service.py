@@ -1,3 +1,6 @@
+from app.models.payment import PaymentStatus
+from app.models.payment import Payment, PaymentStatus
+from app.db.session import get_db
 from sqlalchemy.orm import Session
 from fastapi import BackgroundTasks, HTTPException
 
@@ -14,10 +17,101 @@ import random
 import uuid
 import time
 
+import stripe
+from app.core.stripe_config import stripe
 
+
+def create_payment_intent(amount: int):
+    try:
+        payment_intent = stripe.PaymentIntent.create(
+            amount=amount * 100,
+            currency='inr',
+            payment_method_types=["card"],
+        )
+
+        return {
+            "client_secret": payment_intent.client_secret,
+            "id": payment_intent.id
+        }
+
+    except Exception as e:
+        return {"stripe error", str(e)}
+
+        return {
+            "error": str(e)
+        }
+
+
+def confirm_payment(payment_intent_id: str, order_id: int, db: Session):
+    try:
+        # 🔹 Confirm Stripe payment
+        payment = stripe.PaymentIntent.confirm(
+            payment_intent_id,
+            payment_method="pm_card_visa"
+        )
+
+        # 🔹 Convert status
+        if payment.status == "succeeded":
+            status_enum = PaymentStatus.SUCCESS
+        elif payment.status == "failed":
+            status_enum = PaymentStatus.FAILED
+        else:
+            status_enum = PaymentStatus.PENDING
+
+        # 🔹 Save payment
+        save_payment(
+            db=db,
+            order_id=order_id,
+            amount=payment.amount / 100,
+            status=payment.status,
+            transaction_id=payment.id
+        )
+
+        # ✅ 🔥 UPDATE ORDER STATUS HERE
+        if payment.status == "succeeded":
+            order = db.query(Order).filter(Order.id == order_id).first()
+
+            if order:
+                order.status = "PAID"   # ✅ THIS LINE
+                db.commit()             # ✅ SAVE CHANGE
+
+        return {
+            "status": payment.status,
+            "id": payment.id
+        }
+
+    except Exception as e:
+        return {"error": str(e)}
+
+
+def save_payment(db, order_id, amount, status, transaction_id):
+
+    # ✅ Convert Stripe status → Enum
+    if status == "succeeded":
+        status_enum = PaymentStatus.SUCCESS
+    elif status == "failed":
+        status_enum = PaymentStatus.FAILED
+    else:
+        status_enum = PaymentStatus.PENDING
+
+    payment = Payment(
+        order_id=order_id,
+        amount=amount,
+        status=status_enum,
+        payment_method="card",
+        transaction_id=transaction_id
+    )
+
+    db.add(payment)
+    db.commit()
+    db.refresh(payment)
+
+    return payment
 # =========================
 # CREATE PAYMENT
 # =========================
+
+
 def create_payment(
     db: Session,
     order_id: int,

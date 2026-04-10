@@ -13,6 +13,8 @@ from app.routers.coupon import router as coupon_router
 from app.routers.stock import router as stock_router
 from app.core.logger import logger
 import time
+from app.routers import webhook
+
 
 app = FastAPI()
 
@@ -24,6 +26,9 @@ app.include_router(payment_router)
 app.include_router(cart_router)
 app.include_router(coupon_router)
 app.include_router(stock_router)
+app.include_router(webhook.router)
+
+# thank-fine-amity-pride  clears-posh-honest-nice
 
 # ✅ create tables
 Base.metadata.create_all(bind=engine)
