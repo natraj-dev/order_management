@@ -1,38 +1,54 @@
 def order_confirmation_template(order_id: int):
     return f"""
-      Order Confirmed!
+    <html>
+    <body style="font-family: Arial;">
 
-    Your order #{order_id} has been placed successfully.
+        <h2 style="color: green;">Order Confirmed 🎉</h2>
 
-    Thank you for shopping with us!
+        <p>Your order <b>#{order_id}</b> has been placed successfully.</p>
+
+        <p>We are preparing your items for shipment.</p>
+
+        <hr>
+
+        <p style="color: gray;">Thank you for shopping with us ❤️</p>
+
+    </body>
+    </html>
     """
 
 
-def payment_success_template(order_id: int):
+def payment_template(order_id: int, status: str):
     return f"""
-      Payment Successful!
+    <html>
+    <body style="font-family: Arial;">
 
-    Your payment for order #{order_id} was successful.
+        <h2 style="color: blue;">Payment Update 💳</h2>
 
-    Your order is now being processed.
+        <p>Your payment for order <b>#{order_id}</b> is:</p>
+
+        <h3 style="color: {'green' if status == 'SUCCESS' else 'red'};">
+            {status}
+        </h3>
+
+        <hr>
+
+        <p>Thank you for your purchase!</p>
+
+    </body>
+    </html>
     """
 
 
-def payment_failed_template(order_id: int):
+def cancel_template(order_id: int):
     return f"""
-      Payment Failed!
+    <html>
+    <body>
 
-    Your payment for order #{order_id} failed.
+        <h2 style="color: red;">Order Cancelled ❌</h2>
 
-    Please try again.
-    """
+        <p>Your order <b>#{order_id}</b> has been cancelled.</p>
 
-
-def order_status_template(order_id: int, status: str):
-    return f"""
-      Order Update
-
-    Your order #{order_id} status is now: {status}
-
-    Thank you!
+    </body>
+    </html>
     """

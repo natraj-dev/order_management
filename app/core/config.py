@@ -2,10 +2,10 @@ from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
+    DATABASE_URL: str
+
     EMAIL: str
-    EMAIL_PASSWORD: str
-    SMTP_SERVER: str = "smtp.gmail.com"
-    SMTP_PORT: int = 587
+    PASSWORD: str
 
     class Config:
         env_file = ".env"

@@ -1,0 +1,128 @@
+{"time": "2026-04-10T01:32:22.127315", "level": "INFO", "message": "\u27a1\ufe0f POST http://127.0.0.1:8004/auth/login"}
+{"time": "2026-04-10T01:32:22.180827", "level": "INFO", "message": "\u2b05\ufe0f 401 completed in 53.52ms"}
+{"time": "2026-04-10T01:32:56.740476", "level": "INFO", "message": "\u27a1\ufe0f POST http://127.0.0.1:8004/auth/login"}
+{"time": "2026-04-10T01:32:56.795951", "level": "INFO", "message": "\u2b05\ufe0f 401 completed in 55.53ms"}
+{"time": "2026-04-10T01:34:31.621469", "level": "INFO", "message": "\u27a1\ufe0f GET http://127.0.0.1:8004/auth/login"}
+{"time": "2026-04-10T01:34:31.622939", "level": "INFO", "message": "\u2b05\ufe0f 405 completed in 1.47ms"}
+{"time": "2026-04-10T01:43:31.067108", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T01:43:31.508886", "level": "INFO", "message": "RESPONSE | status=200 time=441.84ms path=/auth/login"}
+{"time": "2026-04-10T01:44:01.157596", "level": "INFO", "message": "REQUEST | method=GET path=/auth/test-auth"}
+{"time": "2026-04-10T01:44:01.160871", "level": "INFO", "message": "RESPONSE | status=200 time=3.32ms path=/auth/test-auth"}
+{"time": "2026-04-10T01:47:44.910058", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T01:47:45.248486", "level": "INFO", "message": "RESPONSE | status=200 time=338.44ms path=/auth/login"}
+{"time": "2026-04-10T01:47:46.094508", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T01:47:46.459974", "level": "INFO", "message": "RESPONSE | status=200 time=365.5ms path=/auth/login"}
+{"time": "2026-04-10T01:47:47.136522", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T01:47:47.482529", "level": "INFO", "message": "RESPONSE | status=200 time=346.03ms path=/auth/login"}
+{"time": "2026-04-10T01:47:47.617393", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T01:47:47.950609", "level": "INFO", "message": "RESPONSE | status=200 time=333.26ms path=/auth/login"}
+{"time": "2026-04-10T01:47:48.106317", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T01:47:48.450078", "level": "INFO", "message": "RESPONSE | status=200 time=343.8ms path=/auth/login"}
+{"time": "2026-04-10T01:47:48.590935", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T01:47:48.949432", "level": "INFO", "message": "RESPONSE | status=200 time=358.52ms path=/auth/login"}
+{"time": "2026-04-10T01:47:49.084979", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T01:47:49.419789", "level": "INFO", "message": "RESPONSE | status=200 time=334.84ms path=/auth/login"}
+{"time": "2026-04-10T01:47:49.547684", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T01:47:49.889161", "level": "INFO", "message": "RESPONSE | status=200 time=341.49ms path=/auth/login"}
+{"time": "2026-04-10T01:47:50.032771", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T01:47:50.369305", "level": "INFO", "message": "RESPONSE | status=200 time=336.61ms path=/auth/login"}
+{"time": "2026-04-10T01:47:50.530787", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T01:47:50.881883", "level": "INFO", "message": "RESPONSE | status=200 time=351.16ms path=/auth/login"}
+{"time": "2026-04-10T01:47:51.033071", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T01:47:51.376228", "level": "INFO", "message": "RESPONSE | status=200 time=343.16ms path=/auth/login"}
+{"time": "2026-04-10T01:47:51.551983", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T01:47:51.946361", "level": "INFO", "message": "RESPONSE | status=200 time=394.26ms path=/auth/login"}
+{"time": "2026-04-10T01:47:52.063337", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T01:47:52.380908", "level": "INFO", "message": "RESPONSE | status=200 time=317.62ms path=/auth/login"}
+{"time": "2026-04-10T01:47:52.549599", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T01:47:52.899952", "level": "INFO", "message": "RESPONSE | status=200 time=350.41ms path=/auth/login"}
+{"time": "2026-04-10T01:47:53.073943", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T01:47:53.407796", "level": "INFO", "message": "RESPONSE | status=200 time=333.86ms path=/auth/login"}
+{"time": "2026-04-10T01:47:53.594362", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T01:47:53.934824", "level": "INFO", "message": "RESPONSE | status=200 time=340.5ms path=/auth/login"}
+{"time": "2026-04-10T01:47:54.091697", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T01:47:54.430732", "level": "INFO", "message": "RESPONSE | status=200 time=339.07ms path=/auth/login"}
+{"time": "2026-04-10T01:47:54.620979", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T01:47:54.969431", "level": "INFO", "message": "RESPONSE | status=200 time=348.47ms path=/auth/login"}
+{"time": "2026-04-10T01:47:55.133550", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T01:47:55.472144", "level": "INFO", "message": "RESPONSE | status=200 time=338.56ms path=/auth/login"}
+{"time": "2026-04-10T01:47:55.644540", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T01:47:55.994610", "level": "INFO", "message": "RESPONSE | status=200 time=350.07ms path=/auth/login"}
+{"time": "2026-04-10T01:47:56.144475", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T01:47:56.505133", "level": "INFO", "message": "RESPONSE | status=200 time=360.69ms path=/auth/login"}
+{"time": "2026-04-10T01:47:56.637624", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T01:47:56.981957", "level": "INFO", "message": "RESPONSE | status=200 time=344.31ms path=/auth/login"}
+{"time": "2026-04-10T01:47:57.111210", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T01:47:57.460147", "level": "INFO", "message": "RESPONSE | status=200 time=348.96ms path=/auth/login"}
+{"time": "2026-04-10T01:47:57.597037", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T01:47:57.947692", "level": "INFO", "message": "RESPONSE | status=200 time=350.67ms path=/auth/login"}
+{"time": "2026-04-10T01:47:58.075812", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T01:47:58.424942", "level": "INFO", "message": "RESPONSE | status=200 time=349.12ms path=/auth/login"}
+{"time": "2026-04-10T01:47:58.558463", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T01:47:58.915381", "level": "INFO", "message": "RESPONSE | status=200 time=356.94ms path=/auth/login"}
+{"time": "2026-04-10T01:47:59.034708", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T01:47:59.367877", "level": "INFO", "message": "RESPONSE | status=200 time=333.19ms path=/auth/login"}
+{"time": "2026-04-10T01:47:59.519173", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T01:47:59.854942", "level": "INFO", "message": "RESPONSE | status=200 time=335.78ms path=/auth/login"}
+{"time": "2026-04-10T01:49:39.213588", "level": "INFO", "message": "REQUEST | method=GET path=/docs"}
+{"time": "2026-04-10T01:49:39.214686", "level": "INFO", "message": "RESPONSE | status=200 time=1.23ms path=/docs"}
+{"time": "2026-04-10T01:49:39.434697", "level": "INFO", "message": "REQUEST | method=GET path=/openapi.json"}
+{"time": "2026-04-10T01:49:39.497846", "level": "INFO", "message": "RESPONSE | status=200 time=63.11ms path=/openapi.json"}
+{"time": "2026-04-10T01:49:45.139534", "level": "INFO", "message": "REQUEST | method=GET path=/auth/test-auth"}
+{"time": "2026-04-10T01:49:45.140773", "level": "INFO", "message": "RESPONSE | status=401 time=1.29ms path=/auth/test-auth"}
+{"time": "2026-04-10T01:50:39.250324", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T01:50:39.603314", "level": "INFO", "message": "RESPONSE | status=200 time=352.97ms path=/auth/login"}
+{"time": "2026-04-10T01:51:01.947752", "level": "INFO", "message": "REQUEST | method=GET path=/auth/test-auth"}
+{"time": "2026-04-10T01:51:01.950564", "level": "INFO", "message": "RESPONSE | status=200 time=2.82ms path=/auth/test-auth"}
+{"time": "2026-04-10T01:51:54.057375", "level": "INFO", "message": "REQUEST | method=POST path=/auth/logout"}
+{"time": "2026-04-10T01:51:54.060696", "level": "INFO", "message": "RESPONSE | status=200 time=3.35ms path=/auth/logout"}
+{"time": "2026-04-10T01:52:02.931102", "level": "INFO", "message": "REQUEST | method=GET path=/auth/test-auth"}
+{"time": "2026-04-10T01:52:02.932793", "level": "INFO", "message": "RESPONSE | status=401 time=1.67ms path=/auth/test-auth"}
+{"time": "2026-04-10T01:53:50.888830", "level": "INFO", "message": "REQUEST | method=POST path=/auth/login"}
+{"time": "2026-04-10T01:53:51.260454", "level": "INFO", "message": "RESPONSE | status=200 time=371.6ms path=/auth/login"}
+{"time": "2026-04-10T01:54:44.666289", "level": "INFO", "message": "REQUEST | method=GET path=/products/"}
+{"time": "2026-04-10T01:55:33.835110", "level": "INFO", "message": "RESPONSE | status=200 time=49168.88ms path=/products/"}
+{"time": "2026-04-10T01:57:03.738516", "level": "INFO", "message": "REQUEST | method=GET path=/products/"}
+{"time": "2026-04-10T01:57:47.829199", "level": "INFO", "message": "RESPONSE | status=200 time=44090.7ms path=/products/"}
+{"time": "2026-04-10T01:58:48.587722", "level": "INFO", "message": "REQUEST | method=GET path=/products/"}
+{"time": "2026-04-10T01:59:33.315672", "level": "INFO", "message": "RESPONSE | status=200 time=44728.01ms path=/products/"}
+{"time": "2026-04-10T02:00:09.450089", "level": "INFO", "message": "REQUEST | method=GET path=/products/"}
+{"time": "2026-04-10T02:00:56.047107", "level": "INFO", "message": "RESPONSE | status=200 time=46596.94ms path=/products/"}
+{"time": "2026-04-10T02:01:21.190210", "level": "INFO", "message": "REQUEST | method=GET path=/products/"}
+{"time": "2026-04-10T02:02:06.066289", "level": "INFO", "message": "RESPONSE | status=200 time=44876.1ms path=/products/"}
+{"time": "2026-04-10T02:30:26.403200", "level": "INFO", "message": "REQUEST | method=POST path=/auth/register"}
+{"time": "2026-04-10T02:30:26.406632", "level": "INFO", "message": "RESPONSE | status=404 time=3.51ms path=/auth/register"}
+{"time": "2026-04-10T02:31:04.119956", "level": "INFO", "message": "REQUEST | method=POST path=/auth/register"}
+{"time": "2026-04-10T02:31:04.122269", "level": "INFO", "message": "RESPONSE | status=404 time=2.24ms path=/auth/register"}
+{"time": "2026-04-10T02:35:10.676431", "level": "INFO", "message": "REQUEST | method=GET path=/docs"}
+{"time": "2026-04-10T02:35:10.680653", "level": "INFO", "message": "RESPONSE | status=200 time=4.45ms path=/docs"}
+{"time": "2026-04-10T02:35:11.056267", "level": "INFO", "message": "REQUEST | method=GET path=/openapi.json"}
+{"time": "2026-04-10T02:35:11.188461", "level": "INFO", "message": "RESPONSE | status=200 time=132.17ms path=/openapi.json"}
+{"time": "2026-04-10T02:35:38.815515", "level": "INFO", "message": "REQUEST | method=POST path=/register"}
+{"time": "2026-04-10T02:35:39.358883", "level": "ERROR", "message": "ERROR | method=POST path=/register error=(pymysql.err.IntegrityError) (1062, \"Duplicate entry 'natarajanelangovan14@gmail.com' for key 'users.ix_users_email'\")\n[SQL: INSERT INTO users (email, password, `role`) VALUES (%(email)s, %(password)s, %(role)s)]\n[parameters: {'email': 'natarajanelangovan14@gmail.com', 'password': '$2b$12$Pu5kGSpHinoXfk6tu/5vE.c4xCl8c/T83VDiAz3SLzVKEH7PwWXoC', 'role': 'customer'}]\n(Background on this error at: https://sqlalche.me/e/20/gkpj) time=543.17ms"}
+{"time": "2026-04-10T02:35:52.957496", "level": "INFO", "message": "REQUEST | method=GET path=/docs"}
+{"time": "2026-04-10T02:35:52.959828", "level": "INFO", "message": "RESPONSE | status=200 time=2.26ms path=/docs"}
+{"time": "2026-04-10T02:35:53.289422", "level": "INFO", "message": "REQUEST | method=GET path=/openapi.json"}
+{"time": "2026-04-10T02:35:53.291653", "level": "INFO", "message": "RESPONSE | status=200 time=2.28ms path=/openapi.json"}
+{"time": "2026-04-10T02:42:34.928335", "level": "INFO", "message": "REQUEST | method=GET path=/docs"}
+{"time": "2026-04-10T02:42:34.930977", "level": "INFO", "message": "RESPONSE | status=200 time=2.72ms path=/docs"}
+{"time": "2026-04-10T02:42:55.870295", "level": "INFO", "message": "REQUEST | method=GET path=/docs"}
+{"time": "2026-04-10T02:42:55.872252", "level": "INFO", "message": "RESPONSE | status=200 time=1.94ms path=/docs"}
+{"time": "2026-04-10T02:42:56.185799", "level": "INFO", "message": "REQUEST | method=GET path=/openapi.json"}
+{"time": "2026-04-10T02:42:56.300180", "level": "INFO", "message": "RESPONSE | status=200 time=114.36ms path=/openapi.json"}
+{"time": "2026-04-10T02:43:35.556588", "level": "INFO", "message": "REQUEST | method=POST path=/register"}
+{"time": "2026-04-10T02:43:36.222335", "level": "INFO", "message": "RESPONSE | status=200 time=665.82ms path=/register"}
+{"time": "2026-04-10T02:43:48.122836", "level": "INFO", "message": "REQUEST | method=GET path=/"}
+{"time": "2026-04-10T02:43:48.127176", "level": "INFO", "message": "RESPONSE | status=200 time=4.4ms path=/"}
+{"time": "2026-04-10T02:46:20.261496", "level": "INFO", "message": "REQUEST | method=GET path=/docs"}
+{"time": "2026-04-10T02:46:20.266604", "level": "INFO", "message": "RESPONSE | status=200 time=5.24ms path=/docs"}
+{"time": "2026-04-10T02:46:20.642167", "level": "INFO", "message": "REQUEST | method=GET path=/openapi.json"}
+{"time": "2026-04-10T02:46:20.738397", "level": "INFO", "message": "RESPONSE | status=200 time=96.25ms path=/openapi.json"}
+{"time": "2026-04-10T02:49:29.401793", "level": "INFO", "message": "REQUEST | method=GET path=/"}
+{"time": "2026-04-10T02:49:29.407412", "level": "INFO", "message": "RESPONSE | status=200 time=5.62ms path=/"}
+{"time": "2026-04-10T02:49:29.842572", "level": "INFO", "message": "REQUEST | method=GET path=/favicon.ico"}
+{"time": "2026-04-10T02:49:29.845297", "level": "INFO", "message": "RESPONSE | status=404 time=2.73ms path=/favicon.ico"}
+{"time": "2026-04-10T02:49:35.799840", "level": "INFO", "message": "REQUEST | method=GET path=/docs"}
+{"time": "2026-04-10T02:49:35.801466", "level": "INFO", "message": "RESPONSE | status=200 time=1.71ms path=/docs"}
+{"time": "2026-04-10T02:49:36.082656", "level": "INFO", "message": "REQUEST | method=GET path=/openapi.json"}
+{"time": "2026-04-10T02:49:36.250608", "level": "INFO", "message": "RESPONSE | status=200 time=168.01ms path=/openapi.json"}

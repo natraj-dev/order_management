@@ -1,9 +1,10 @@
 import enum
-from sqlalchemy import Column, Integer, ForeignKey, Float
-from sqlalchemy import Column, Integer, ForeignKey, Float, String, DateTime, Enum
-from sqlalchemy.orm import relationship
-from app.db.base import Base
 from datetime import datetime
+
+from sqlalchemy import Column, Integer, ForeignKey, Float, DateTime, Enum
+from sqlalchemy.orm import relationship
+
+from app.db.base import Base
 
 
 class OrderStatus(str, enum.Enum):
@@ -20,10 +21,28 @@ class Order(Base):
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, ForeignKey("users.id"))
     total_amount = Column(Float)
-    status = Column(Enum(OrderStatus), default=OrderStatus.PENDING)
+
+    status = Column(
+        Enum(OrderStatus, name="order_status"),
+        default=OrderStatus.PENDING
+    )
+
     created_at = Column(DateTime, default=datetime.utcnow)
 
-    items = relationship("OrderItem", back_populates="order")
+    # ✅ relationships
+    items = relationship(
+        "OrderItem",
+        back_populates="order",
+        cascade="all, delete-orphan"
+    )
+
+    payments = relationship(
+        "Payment",
+        back_populates="order",
+        cascade="all, delete-orphan"
+    )
+
+    user = relationship("User", lazy="joined")
 
 
 class OrderItem(Base):
@@ -32,6 +51,7 @@ class OrderItem(Base):
     id = Column(Integer, primary_key=True, index=True)
     order_id = Column(Integer, ForeignKey("orders.id"))
     product_id = Column(Integer, ForeignKey("products.id"))
+
     quantity = Column(Integer)
     price = Column(Float)
 

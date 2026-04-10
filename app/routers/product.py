@@ -5,7 +5,7 @@ from app.db.session import get_db
 from app.schemas.product import ProductCreate, ProductResponse
 from app.services.product_service import (
     create_product,
-    get_all_products,
+    get_products,   # ✅ FIXED
     get_product_by_id,
     update_product,
     delete_product,
@@ -25,10 +25,16 @@ def add_product(
     return create_product(db, data)
 
 
-#  Get all products (Public)
-@router.get("/", response_model=list[ProductResponse])
-def get_products(db: Session = Depends(get_db)):
-    return get_all_products(db)
+#  Get all products (Public - WITH CACHE)
+@router.get("/")
+def get_products_api(
+    search: str = None,
+    min_price: float = None,
+    max_price: float = None,
+    sort_by: str = None,
+    db: Session = Depends(get_db)
+):
+    return get_products(db, search, min_price, max_price, sort_by)
 
 
 #  Get product by ID

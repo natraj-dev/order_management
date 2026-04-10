@@ -1,50 +1,27 @@
-from fastapi import BackgroundTasks
 import smtplib
 from email.mime.text import MIMEText
-from app.core.config import settings
 
-
-import smtplib
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
-from app.core.config import settings
+SMTP_SERVER = "smtp.gmail.com"
+SMTP_PORT = 587
+EMAIL = "natarajanelangovan14@gmail.com"
+PASSWORD = "vckbmxxdcolicysp"
 
 
 def send_email(to_email: str, subject: str, body: str):
     try:
-        msg = MIMEMultipart()
-        msg["From"] = settings.EMAIL
-        msg["To"] = to_email
+        msg = MIMEText(body, "html")
         msg["Subject"] = subject
+        msg["From"] = EMAIL
+        msg["To"] = to_email
 
-        msg.attach(MIMEText(body, "plain"))
-
-        server = smtplib.SMTP(settings.SMTP_SERVER, settings.SMTP_PORT)
+        server = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)
         server.starttls()
-        server.login(settings.EMAIL, settings.EMAIL_PASSWORD)
+        server.login(EMAIL, PASSWORD)
 
-        server.sendmail(settings.EMAIL, to_email, msg.as_string())
+        server.sendmail(EMAIL, to_email, msg.as_string())
         server.quit()
 
-        print(f"✅ Email sent to {to_email}")
+        print("✅ Email sent successfully")
 
     except Exception as e:
         print("❌ Email failed:", str(e))
-
-
-def send_order_email(background_tasks: BackgroundTasks, email: str):
-    background_tasks.add_task(
-        send_email,
-        email,
-        "Order Confirmation",
-        "Your order has been placed successfully!"
-    )
-
-
-def send_payment_email(background_tasks: BackgroundTasks, email: str):
-    background_tasks.add_task(
-        send_email,
-        email,
-        "Payment Success",
-        "Your payment was successful!"
-    )

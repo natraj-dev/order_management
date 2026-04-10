@@ -1,34 +1,72 @@
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, BackgroundTasks, HTTPException
 from sqlalchemy.orm import Session
 
 from app.db.session import get_db
-from app.schemas.payment import PaymentCreate, PaymentResponse
-from app.services.payment_service import create_payment
+from app.schemas.payment import PaymentCreate
+from app.services.payment_service import create_payment, process_payment
 from app.core.security import get_current_user
-from fastapi import BackgroundTasks
-from app.services.email_service import send_payment_email
-from app.models.user import User
-from app.models.order import Order
 
-router = APIRouter(prefix="/payments", tags=["Payments"])
+router = APIRouter(prefix="/payment", tags=["Payments"])
 
 
-@router.post("/", response_model=PaymentResponse)
+# ✅ CREATE PAYMENT
+@router.post("/")
 def make_payment(
     data: PaymentCreate,
     background_tasks: BackgroundTasks,
-    db: Session = Depends(get_db),
-    user=Depends(get_current_user),
+    db: Session = Depends(get_db)
 ):
-    try:
-        payment = create_payment(db, data.order_id, data.payment_method)
+    return create_payment(
+        db,
+        data.order_id,
+        data.payment_method,
+        background_tasks
+    )
 
-        order = db.query(Order).filter(Order.id == data.order_id).first()
-        db_user = db.query(User).filter(User.id == order.user_id).first()
 
-        send_payment_email(background_tasks, db_user.email)
+# ✅ PROCESS PAYMENT (simulate success/failure)
+@router.post("/pay")
+def pay(
+    order_id: int,
+    amount: float,
+    background_tasks: BackgroundTasks,
+    db: Session = Depends(get_db)
+):
+    return process_payment(
+        db,
+        order_id,
+        amount,
+        background_tasks   # ✅ FIXED
+    )
 
-        return payment
 
-    except Exception as e:
-        raise HTTPException(status_code=400, detail=str(e))
+# ✅ RETRY PAYMENT
+@router.post("/retry")
+def retry_payment(
+    payment_id: int,
+    background_tasks: BackgroundTasks,
+    db: Session = Depends(get_db)
+):
+    from app.models.payment import Payment
+
+    payment = db.query(Payment).filter(Payment.id == payment_id).first()
+
+    if not payment:
+        raise HTTPException(status_code=404, detail="Payment not found")
+
+    if payment.status.lower() == "success":
+        return {"message": "Already paid"}
+
+    # ✅ retry payment with background task
+    new_payment = process_payment(
+        db,
+        payment.order_id,
+        payment.amount,
+        background_tasks   # ✅ FIXED
+    )
+
+    return {
+        "message": "Retry attempted",
+        "new_status": new_payment.status,
+        "transaction_id": new_payment.transaction_id
+    }

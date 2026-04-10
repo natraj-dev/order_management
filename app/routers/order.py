@@ -1,3 +1,4 @@
+from app.services.email_templates import cancel_template
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from app.db.session import get_db
@@ -6,7 +7,7 @@ from app.services.order_service import create_order
 from app.core.security import get_current_user
 from app.models.user import User
 from fastapi import BackgroundTasks
-from app.services.email_service import send_order_email
+from app.services.email_service import send_email
 from app.models.user import User
 from app.core.security import require_admin
 from app.models.order import Order
@@ -16,16 +17,14 @@ from app.services.email_service import send_email
 from app.services.email_templates import order_confirmation_template
 from app.models.user import User
 from app.models.payment import Payment
-
 from fastapi import APIRouter, Depends, BackgroundTasks, HTTPException
 from sqlalchemy.orm import Session
-
 from app.db.session import get_db
 from app.schemas.order import OrderCreate, OrderResponse
 from app.core.security import get_current_user
 from app.models.user import User
 
-from app.services.order_service import create_order
+from app.services.order_service import create_order, get_total_orders, get_total_revenue, get_top_products, get_user_stats
 
 router = APIRouter(prefix="/orders", tags=["Orders"])
 
@@ -43,7 +42,7 @@ def create_new_order(
         if not db_user:
             raise HTTPException(status_code=404, detail="User not found")
 
-        # ✅ ONLY ONE CALL
+        #  ONLY ONE CALL
         order = create_order(
             db,
             db_user.id,
@@ -79,9 +78,11 @@ def update_order_status(
 
 # a customer can cancel the order
 
+
 @router.put("/{order_id}/cancel")
 def cancel_order(
     order_id: int,
+    background_tasks: BackgroundTasks,   # ✅ ADD THIS
     db: Session = Depends(get_db),
     user=Depends(get_current_user),
 ):
@@ -90,18 +91,31 @@ def cancel_order(
     if not order:
         raise HTTPException(status_code=404, detail="Order not found")
 
-    if order.user_id != db.query(User).filter(User.email == user["sub"]).first().id:
+    db_user = db.query(User).filter(User.email == user["sub"]).first()
+
+    if order.user_id != db_user.id:
         raise HTTPException(status_code=403, detail="Not your order")
 
     if order.status == OrderStatus.DELIVERED:
         raise HTTPException(
-            status_code=400, detail="Cannot cancel delivered order")
+            status_code=400, detail="Cannot cancel delivered order"
+        )
 
+    # ✅ Update status
     order.status = OrderStatus.CANCELLED
     db.commit()
 
-    return {"message": "Order cancelled"}
+    # ✅ ADD EMAIL HERE
+    message = cancel_template(order.id)
 
+    background_tasks.add_task(
+        send_email,
+        db_user.email,
+        "Order Cancelled",
+        message
+    )
+
+    return {"message": "Order cancelled"}
 # current customer can view the his own order
 
 
@@ -137,8 +151,21 @@ def get_all_orders(
             "id": order.id,
             "user_id": order.user_id,
             "total_amount": order.total_amount,
-            "status": order.status,  # order status
+            "status": order.status,
             "payment_status": payment.status if payment else "Pending"
         })
 
     return result
+
+
+@router.get("/admin/summary")
+def admin_summary(
+    db: Session = Depends(get_db),
+    user=Depends(require_admin)
+):
+    return {
+        "total_orders": get_total_orders(db),
+        "revenue": get_total_revenue(db),
+        "top_products": get_top_products(db),
+        "users": get_user_stats(db)
+    }
